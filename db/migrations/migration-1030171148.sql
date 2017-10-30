@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS workouts (
+id SERIAL PRIMARY KEY,
+category VARCHAR(255),
+description TEXT,
+level INTEGER,
+date_entry DATE NOT NULL DEFAULT CURRENT_DATE
+);
