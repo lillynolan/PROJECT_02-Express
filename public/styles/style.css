@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  box-sizing: border-box;
+  background-color: rgba(11, 8, 10, 0.71);
+  width: 100vw;
+  height: 100vw;
+}
+
+.landing, .login-container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.homeoptions {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.firstoption {
+  margin: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  border: 2px solid white;
+  padding: 20px;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  margin: 20px;
+  background-color: rgba(11, 8, 10, 0.3);
+}
+
+.landing h1, .login-container h1 {
+  font-size: 150px;
+  color: white;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+}
+
+header {
+  border-bottom: 2px solid white;
+  width: 100vw;
+  position: fixed;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+header nav ul {
+  color: white;
+  font-family: 'Muli', sans-serif;
+  flex-wrap: wrap;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: white;
+  font-size: 40px;
+  font-family: 'Muli', sans-serif;
+  justify-content: space-around;
+  margin: 0 50px;
+  text-transform: uppercase;
+}
+
+header a:hover{
+  background-color: rgba(11, 8, 10, 0.1);
+  cursor: pointer;
+  font-size: 45px;
+}
+
+.firstoption:hover{
+  background-color: rgba(11, 8, 10, 0.1);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.login-container input {
+  margin: 5px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  font-family: 'Muli', sans-serif;
+  background-color: rgba(11, 8, 10, 0.3);
+  color: white;
+  font-weight: bold;
+  justify-content: center;
+}
+
