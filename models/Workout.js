@@ -12,7 +12,8 @@ Workout.findById = id => {
 
 Workout.create = workout => {
   return db.one(
-    `INSERT INTO workouts (category, description, level, date_entry, user_id)
+    `INSERT INTO workouts
+    (category, description, level, date_entry, user_id)
     VALUES ($1, $2, $3, $4, $5) RETURNING *`,
     [workout.category, workout.description, workout.level, workout.date_entry, userid]);
 };

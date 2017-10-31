@@ -2,7 +2,7 @@ const express = require('express');
 const workoutRouter = express.Router();
 const authHelpers = require('../services/auth/auth-helpers');
 
-const workoutController = require ('../controllers/workout-controller');
+const workoutController = require('../controllers/workout-controller');
 
 workoutRouter.get('/', workoutController.index);
 
