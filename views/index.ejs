@@ -1,0 +1,15 @@
+<% include ./partials/boilerplate %>
+<div class="landing">
+  <h1>FitClick</h1>
+    <div class="homeoptions">
+      <% if (auth) { %>
+        <div><a class="firstoption" href="/workout">Workouts</a></div>
+        <div><a class="firstoption" href="/workout">Goals</a></div>
+      <% } else { %>
+        <div><a class="firstoption" href="/auth/register">Join</a></div>
+        <div><a class="firstoption" href="auth/login">Login</a></div>
+      <% } %>
+    </div>
+</div>
+
+<% include ./partials/end %>
