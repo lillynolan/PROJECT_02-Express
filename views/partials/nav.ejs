@@ -1,0 +1,12 @@
+<header>
+  <nav>
+    <ul>
+      <li><a class="home" href="/">Home</a></li>
+      <li><a class="workouts" href="/workout">Workouts</a></li>
+      <li><a class="goals" href="/">Goals</a></li>
+  <% if (auth) { %>
+      <li><a class="logout" href="/auth/logout">Logout</a></li>
+  <% } %>
+    </ul>
+  </nav>
+</header>
