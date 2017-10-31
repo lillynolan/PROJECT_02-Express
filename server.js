@@ -47,6 +47,9 @@ app.use('/auth', authRoutes);
 const userRoutes = require('./routes/user-routes');
 app.use('/user', userRoutes);
 
+const goalRoutes = require('./routes/goal-routes');
+app.use('/goal', goalRoutes);
+
 app.use('*', (req, res) => {
   res.status(404).send({
     error: 'Not Found',
