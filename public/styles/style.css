@@ -3,10 +3,11 @@ body {
   box-sizing: border-box;
   background-color: rgba(11, 8, 10, 0.71);
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
+  font-family: 'Muli', sans-serif;
 }
 
-.landing, .login-container {
+.landing, .login-container, .single-container {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -44,7 +45,6 @@ header {
   border-bottom: 2px solid white;
   width: 100vw;
   position: fixed;
-  justify-content: space-between;
   padding: 10px;
 }
 
@@ -65,6 +65,7 @@ header nav ul li a {
   justify-content: space-around;
   margin: 0 50px;
   text-transform: uppercase;
+  text-shadow: 5px 5px 10px black;
 }
 
 header a:hover{
@@ -91,3 +92,85 @@ header a:hover{
   justify-content: center;
 }
 
+.add-button {
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.add-button a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+}
+
+.workoutgoal-container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: 200px auto 0px auto;
+  width: 100vw;
+  height: 80vh;
+}
+
+.workoutandgoal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.workouthome {
+  margin: auto;
+}
+
+.goalhome {
+  margin: auto;
+}
+
+
+.workouthome, .goalhome {
+  color: rgba(11, 8, 10, 0.71);
+  background-color: #EFE8D8;
+  font-weight: bold;
+  width: 30vw;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px #3C485E;
+  border-radius: 5%;
+  box-shadow: 6px 6px 2px #EFE8D8;
+}
+
+.add-buttonhome {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-buttonhome a {
+  color: rgba(11, 8, 10, 0.71);
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.add-buttonhome a:hover {
+  font-size: 30px;
+}
+
+.workoutgoal-container h2 {
+  color: rgba(11, 8, 10, 0.71);
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 2px 2px 5px #3C485E;
+}
+
+.workoutgoal-container h1 {
+  font-size: 100px;
+  color: white;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  text-shadow: 5px 5px 10px black;
+  justify-content: center;
+}
