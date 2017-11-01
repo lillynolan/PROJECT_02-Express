@@ -6,15 +6,28 @@ const usersController = {};
 usersController.index = (req, res) => {
   User.findUserWorkouts(req.user.id)
   .then(workouts => {
-    res.render('workouts/workouts-index', {
-      workouts: workouts,
-      auth: (req.user) ? true : false,
-    })
-  }).catch(err => {
-    console.log(err);
-    res.status(500).json({err: err});
-  });
+      User.findUserGoals(req.user.id)
+      .then(goals => {
+        res.render('users/users-home', {
+          workouts: workouts,
+          goals: goals,
+          auth: (req.user) ? true : false,
+        })
+      })
+  })
 }
+
+// usersController.show = (req, res) => {
+//   User.findById(req.params.id)
+//   .then(user => {
+//     res.status(200).render('users/users-show', {
+//       user: user
+//     });
+//   }).catch(err => {
+//     console.log(err);
+//     res.status(500).json({error: err});
+//   });
+// };
 
 usersController.create = (req, res) => {
   const salt = bcrypt.genSaltSync();

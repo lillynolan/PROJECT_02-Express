@@ -3,7 +3,7 @@ const Goal = require('../models/Goal');
 const goalController = {};
 
 goalController.index = (req, res) => {
-  Goal.findAll().then(goals => {
+  Goal.findAll(req.user.id).then(goals => {
     res.status(200).render('goals/goals-index', {
       goals: goals,
       auth: (req.user) ? true : false,
@@ -32,7 +32,7 @@ goalController.create = (req, res) => {
     name: req.body.name,
     description: req.body.description,
   }, req.user.id).then(goal => {
-    res.redirect(`/goals/${goal.id}`)
+    res.redirect(`/goal/${goal.id}`)
   }).catch(err => {
     console.log(err);
     res.status(500).json({error: err});
@@ -58,7 +58,7 @@ goalController.update = (req, res) => {
     description: req.body.description,
   }, req.params.id)
   .then(goal => {
-    res.redirect(`/goals/${goal.id}`)
+    res.redirect(`/goal/${goal.id}`)
   }).catch(err => {
     console.log(err);
     res.status(500).json({error: err});
@@ -67,7 +67,7 @@ goalController.update = (req, res) => {
 
 goalController.delete = (req, res) => {
   Goal.destroy(req.params.id).then(() => {
-    res.redirect('/goals');
+    res.redirect('/goal');
   }).catch(err => {
     res.status(500).json({error: err});
   });

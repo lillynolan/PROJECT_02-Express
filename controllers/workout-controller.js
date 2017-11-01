@@ -3,7 +3,7 @@ const Workout = require('../models/Workout');
 const workoutController = {}
 
 workoutController.index = (req, res) => {
-  Workout.findAll().then(workouts => {
+  Workout.findAll(req.user.id).then(workouts => {
     res.status(200).render('workouts/workouts-index', {
       workouts: workouts,
       auth: (req.user) ? true : false,
@@ -34,7 +34,7 @@ workoutController.create = (req, res) => {
     level: req.body.level,
     date_entry: req.body.date_entry,
   }, req.user.id).then(workout => {
-    res.redirect(`/workouts/${workout.id}`)
+    res.redirect(`/workout/${workout.id}`)
   }).catch(err => {
     console.log(err);
     res.status(500).json({error: err});
@@ -62,7 +62,7 @@ workoutController.update = (req, res) => {
     date_entry: req.body.date_entry,
   }, req.params.id)
   .then(workout => {
-    res.redirect(`/workouts/${workout.id}`)
+    res.redirect(`/workout/${workout.id}`)
   }).catch(err => {
     console.log(err);
     res.status(500).json({error: err});
@@ -73,7 +73,7 @@ workoutController.update = (req, res) => {
 workoutController.delete = (req, res) => {
   Workout.destroy(req.params.id)
   .then(() => {
-    res.redirect('/workouts');
+    res.redirect('/workout');
   }).catch(err => {
     res.status(500).json({error: err});
   });
