@@ -2,15 +2,15 @@ const db = require('../db/config');
 
 const Goal = {};
 
-Goal.findAll = () => {
-  return db.query('SELECT * FROM goals')
+Goal.findAll = (userid) => {
+  return db.query(`SELECT * FROM goals WHERE user_id = $1`, [userid])
 };
 
-Goal.findById = () => {
+Goal.findById = id => {
   return db.one(`SELECT * FROM goals WHERE id = $1`, [id]);
 };
 
-Goal.create = goal => {
+Goal.create = (goal, userid) => {
   return db.one(
     `INSERT INTO goals
     (name, description, user_id)

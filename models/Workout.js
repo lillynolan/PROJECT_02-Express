@@ -2,15 +2,15 @@ const db = require('../db/config');
 
 const Workout = {};
 
-Workout.findAll = () => {
-  return db.query('SELECT * FROM workouts')
+Workout.findAll = userid => {
+  return db.query(`SELECT * FROM workouts WHERE user_id = $1`, [userid])
 };
 
 Workout.findById = id => {
   return db.one(`SELECT * FROM workouts WHERE id = $1`, [id]);
 };
 
-Workout.create = workout => {
+Workout.create = (workout, userid) => {
   return db.one(
     `INSERT INTO workouts
     (category, description, level, date_entry, user_id)

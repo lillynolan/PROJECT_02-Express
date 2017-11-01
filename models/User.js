@@ -2,6 +2,8 @@ const db = require('../db/config');
 
 const User = {};
 
+//.one or manyorNone made possible by pgpromise
+
 User.findByUserName = userName => {
   return db.oneOrNone(`
     SELECT * FROM users
@@ -24,6 +26,13 @@ User.findUserWorkouts = id => {
     SELECT * FROM workouts
     WHERE user_id = $1
     `, [id]);
-};
+    }
+
+User.findUserGoals = id => {
+  return db.manyOrNone(`
+    SELECT * FROM goals
+    WHERE user_id = $1
+    `, [id]);
+    }
 
 module.exports = User;
