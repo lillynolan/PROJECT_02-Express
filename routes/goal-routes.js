@@ -4,7 +4,7 @@ const authHelpers = require('../services/auth/auth-helpers');
 
 const goalController = require('../controllers/goal-controller');
 
-goalRouter.get('/', goalController.index);
+goalRouter.get('/', authHelpers.loginRequired, goalController.index);
 
 goalRouter.get('/add', authHelpers.loginRequired, (req, res) => {
   res.render('goals/goals-new', {
@@ -17,6 +17,6 @@ goalRouter.get('/:id', goalController.show);
 goalRouter.get('/:id/edit', authHelpers.loginRequired, goalController.edit);
 goalRouter.put('/:id', authHelpers.loginRequired, goalController.update);
 
-goalRouter.delete(':/id', authHelpers.loginRequired, goalController.delete);
+goalRouter.get('/:id/delete', authHelpers.loginRequired, goalController.delete);
 
 module.exports = goalRouter
