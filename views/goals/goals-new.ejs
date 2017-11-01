@@ -1,0 +1,14 @@
+<% include ../partials/boilerplate %>
+
+  <div class="workoutgoal-container">
+    <div class="add">
+      <form action="/goal" method="POST">
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="description" placeholder="Description" />
+        <input type="submit" value="Add Goal" />
+      </form>
+    </div>
+    <a href="/Goals">Back to Goals</a>
+  </div>
+
+<% include ../partials/end %>

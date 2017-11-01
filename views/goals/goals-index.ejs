@@ -1,0 +1,19 @@
+<% include ../partials/boilerplate %>
+  <div class="workoutgoal-container">
+      <% goals.forEach(goal => { %>
+    <div class ="goal">
+      <span class="name"><%= goal.name %></span>
+      <span class="description"><%= goal.description %></span>
+    </div>
+    <div class="options">
+      <ul>
+        <a class="edit-button" href="/goal/<%=goal.id%>/edit">Edit</a>
+        <a class="delete-button" href="/goal/<%= goal.id%>/delete">Delete</a>
+      </ul>
+    </div>
+    <% }) %>
+    <div class = "add-button">
+      <a href="/goal/add">Add a Goal</a>
+    </div>
+  </div>
+<% include ../partials/end %>

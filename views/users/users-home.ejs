@@ -1,0 +1,35 @@
+<% include ../partials/boilerplate %>
+
+<div class="workoutgoal-container">
+  <div class="heading">
+    <h1>FitClick</h1>
+  </div>
+  <div class="workoutandgoal">
+    <div class="workouthome">
+      <h2>Workout Log</h2>
+      <% workouts.forEach(workout => { %>
+        <div class ="workout">
+          <span class="date"><%= new Date(workout.date_entry).toDateString() %>:</span><br>
+          <span class="category"><%= workout.category %></span><br><br>
+        </div>
+      <% }) %>
+      <div class = "add-buttonhome">
+        <a href="/workout/add">Log a workout</a>
+    </div>
+  </div>
+
+  <div class="goalhome">
+      <h2>Weekly Goals</h2>
+      <% goals.forEach(goal => { %>
+        <div class ="goal">
+          <span class="goal"><%= goal.name %></span><br><br>
+        </div>
+      <% }) %>
+    <div class = "add-buttonhome">
+        <a href="/goal/add">Add a goal</a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<% include ../partials/end %>

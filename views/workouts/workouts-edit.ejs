@@ -1,0 +1,16 @@
+<% include ../partials/boilerplate %>
+
+<div class="workoutgoal-container">
+  <div class="edit">
+    <form action="/workout/<%= workout.id%>?_method=PUT" method="POST">
+      <input type="text" name="category" placeholder="Category" value="<%= workout.category %>" />
+      <input type="text" name="description" placeholder="Description" value="<%= workout.description %>" />
+      <input type="number" name="level" placeholder="Level" value="<%= parseInt(workout.level) %>" />
+      <input type="date" name="date_entry" placeholder="Date" value="<%= workout.date_entry %>" />
+      <input type="submit" value="Save" />
+    </form>
+  </div>
+  <a href="/workout/<%=workout.id %>">All Workouts</a>
+</div>
+
+<% include ../partials/end %>

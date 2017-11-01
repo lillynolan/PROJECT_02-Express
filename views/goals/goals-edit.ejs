@@ -1,0 +1,14 @@
+<% include ../partials/boilerplate %>
+
+<div class="workoutgoal-container">
+  <div class="edit">
+    <form action="/goal/<%= goal.id%>?_method=PUT" method="POST">
+      <input type="text" name="name" placeholder="Name" value="<%= goal.name %>" />
+      <input type="text" name="description" placeholder="Description" value="<%= goal.description %>" />
+      <input type="submit" value="Save" />
+    </form>
+  </div>
+  <a href="/goal">Goals</a>
+</div>
+
+<% include ../partials/end %>

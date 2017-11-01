@@ -1,0 +1,15 @@
+<% include ../partials/boilerplate %>
+
+<div class="single-container">
+  <div class="goal">
+    <h1 class="name"><%= goal.name %></h1>
+      <p><%= goal.description %></p>
+  </div>
+  <div class="options">
+      <a class="edit-button" href="/goal/<%=goal.id%>/edit">Edit</a>
+      <a class="delete-button" href="/goal/<%= goal.id%>/delete">Delete</a>
+  </div>
+<a class="link" href="/goal">Back to Goals</a>
+</div>
+
+<% include ../partials/end %>

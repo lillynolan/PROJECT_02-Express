@@ -1,23 +1,19 @@
 <% include ../partials/boilerplate %>
-<div class = "add-button">
-  <a href="/workout/add">Log a workout</a>
-</div>
-<div class="workout-container">
+<div class="workoutgoal-container">
 <% workouts.forEach(workout => { %>
   <div class ="workout">
-    <span class="date"><%= workout.date_entry %></span>
+    <span class="date"><%= new Date(workout.date_entry).toDateString() %></span>
     <span class="category"><%= workout.category %></span>
-    <span class="description"><%= workout.description %></span>
-    <span class="level"><%= workout.level %></span>
   </div>
   <div class="options">
     <ul>
-      <li><a href="/workout/<%= workout.id %>">Info</a></li>
-      <li><a href="/workout/<%= todo.id%>/edit">Edit</a></li>
-      <li><a href="/workout/<%= todo.id %>">Delete</a></li>
+      <li><a href="/workout/<%= workout.id%>">Detail</a></li>
     </ul>
   </div>
   <% }) %>
+</div>
+<div class = "add-button">
+  <a href="/workout/add">Log a workout</a>
 </div>
 
 <% include ../partials/end %>
