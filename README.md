@@ -4,7 +4,7 @@ PROJECT NAME: FITCLICK
 
 DESCRIPTION: 
 
-FitCLICK is an exercise tracker, a central place for users to record fitness activity and goals. Users can log their daily workouts as well as keep a dairy of their personal goals. The premise of the app is to be a positive reinforcement for individuals who are working towards either a fitness or gnereral goal. Emphasing a place to organize your general wellness. The app gives the user the flexibility to decide the level of their workout and write down a description to revert back to in the future. Each user has a profile unique to their goals and workouts. 
+FitClick is an exercise tracker, a central place for users to record fitness activity and goals. Users can log their daily workouts as well as keep a dairy of their personal goals. The premise of the app is to be a positive reinforcement for individuals who are working towards either a fitness or gnereral goal. Emphasing a place to organize your general wellness. The app gives the user the flexibility to decide the level of their workout and write down a description to revert back to in the future. Each user has a profile unique to their goals and workouts. 
 
 DATABASE STRUCTURE
 Database: fitclick_dev
@@ -18,6 +18,7 @@ id, name, description, user_id
 
 
 WIREFRAMES: 
+
 ![imageDescrip](https://i.imgur.com/kEaWPlg.jpg)
 ![imageDescrip](https://i.imgur.com/wSdq3si.jpg)
 
