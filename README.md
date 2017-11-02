@@ -1,4 +1,4 @@
-# PROJECT_02-Express-FitCLICK
+# PROJECT_02-Express-FitClick
 
 PROJECT NAME: FITCLICK
 
