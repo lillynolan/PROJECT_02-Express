@@ -6,27 +6,29 @@
   </div>
   <div class="workoutandgoal">
     <div class="workouthome">
-      <h2>Workout Log</h2>
+      <h2><a href="/workout">Workout Log</a></h2>
       <% workouts.forEach(workout => { %>
         <div class ="workout">
-          <span class="date"><%= new Date(workout.date_entry).toDateString() %>:</span><br>
+          <span class="date"><%= new Date(workout.date_entry).toDateString() %>:</span>
           <span class="category"><%= workout.category %></span><br><br>
+          <span><a href="/workout/<%= workout.id%>">Detail</a></span>
         </div>
       <% }) %>
       <div class = "add-buttonhome">
-        <a href="/workout/add">Log a workout</a>
+        <a href="/workout/add">Log a workout +</a>
     </div>
   </div>
 
   <div class="goalhome">
-      <h2>Weekly Goals</h2>
+      <h2><a href="/goal">Weekly Goals</h2>
       <% goals.forEach(goal => { %>
         <div class ="goal">
-          <span class="goal"><%= goal.name %></span><br><br>
+          <span class="goalname"><%= goal.name %></span><br><br>
+          <span><a href="/goal/<%= goal.id%>">Detail</a></span>
         </div>
       <% }) %>
     <div class = "add-buttonhome">
-        <a href="/goal/add">Add a goal</a>
+        <a href="/goal/add">Add a goal +</a>
     </div>
   </div>
   </div>

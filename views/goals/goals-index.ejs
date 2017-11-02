@@ -1,19 +1,25 @@
 <% include ../partials/boilerplate %>
-  <div class="workoutgoal-container">
+  <div class="workoutgoal-view">
+  <h1>Goals</h1>
+  <div class="indexplusoptions">
       <% goals.forEach(goal => { %>
-    <div class ="goal">
+    <div class ="indexview1">
       <span class="name"><%= goal.name %></span>
+    </div>
+    <div class="indexview2">
       <span class="description"><%= goal.description %></span>
     </div>
     <div class="options">
       <ul>
-        <a class="edit-button" href="/goal/<%=goal.id%>/edit">Edit</a>
-        <a class="delete-button" href="/goal/<%= goal.id%>/delete">Delete</a>
+        <li><a class="edit-button" href="/goal/<%=goal.id%>/edit">Edit</a></li>
+        <li><a class="delete-button" href="/goal/<%= goal.id%>/delete">Delete</a></li>
       </ul>
     </div>
     <% }) %>
+  </div>
     <div class = "add-button">
-      <a href="/goal/add">Add a Goal</a>
+      <a href="/goal/add">Add a Goal +</a>
+      <a href="/user">Back to Profile</a>
     </div>
   </div>
 <% include ../partials/end %>

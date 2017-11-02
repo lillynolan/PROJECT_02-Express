@@ -1,9 +1,13 @@
 <% include ../partials/boilerplate %>
-<div class="workoutgoal-container">
+<div class="workoutgoal-view">
+<h1>Workouts</h1>
+<div class="indexplusoptions1">
 <% workouts.forEach(workout => { %>
-  <div class ="workout">
-    <span class="date"><%= new Date(workout.date_entry).toDateString() %></span>
-    <span class="category"><%= workout.category %></span>
+  <div class="indexview1">
+    <span class="dateview">Date Logged: <%= new Date(workout.date_entry).toDateString() %></span>
+  </div>
+  <div class="indexview2">
+    <span class="categoryview"><%= workout.category %></span>
   </div>
   <div class="options">
     <ul>
@@ -13,7 +17,9 @@
   <% }) %>
 </div>
 <div class = "add-button">
-  <a href="/workout/add">Log a workout</a>
+  <a href="/workout/add">Log a workout +</a><br>
+  <a href="/user">Back to Profile</a>
+</div>
 </div>
 
 <% include ../partials/end %>

@@ -1,7 +1,7 @@
 body {
   display: flex;
   box-sizing: border-box;
-  background-color: rgba(11, 8, 10, 0.71);
+  background-color: #12162D;
   width: 100vw;
   height: 100vh;
   font-family: 'Muli', sans-serif;
@@ -25,31 +25,31 @@ body {
   margin: 30px;
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
-  border: 2px solid white;
+  color: #FFEFE5;
+  border: 2px solid #FFEFE5;
   padding: 20px;
   font-family: 'Muli', sans-serif;
   display: flex;
-  margin: 20px;
-  background-color: rgba(11, 8, 10, 0.3);
+  background-color: #12162D;
+  box-shadow: 0px 1px 2px #FFEFE5;
 }
 
 .landing h1, .login-container h1 {
   font-size: 150px;
-  color: white;
+  color: #FFEFE5;
   font-family: 'Muli', sans-serif;
   display: flex;
 }
 
 header {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #FFEFE5;
+  box-shadow: 0px 0px 10px black;
   width: 100vw;
   position: fixed;
   padding: 10px;
 }
 
 header nav ul {
-  color: white;
   font-family: 'Muli', sans-serif;
   flex-wrap: wrap;
   flex-direction: row;
@@ -58,27 +58,27 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: white;
-  text-decoration: white;
-  font-size: 40px;
+  color: #FFEFE5;
+  text-decoration: none;
+  font-size: 30px;
   font-family: 'Muli', sans-serif;
   justify-content: space-around;
   margin: 0 50px;
   text-transform: uppercase;
-  text-shadow: 5px 5px 10px black;
+  text-shadow: 1px 1px 3px #FFEFE5;
 }
 
-header a:hover{
-  background-color: rgba(11, 8, 10, 0.1);
+header a:hover {
   cursor: pointer;
-  font-size: 45px;
+  font-size: 35px;
 }
 
 .firstoption:hover{
-  background-color: rgba(11, 8, 10, 0.1);
+  background-color: #12162D;
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
+  text-shadow: 1px 1px 3px #FFEFE5;
 }
 
 .login-container input {
@@ -87,21 +87,9 @@ header a:hover{
   padding: 10px 30px;
   font-family: 'Muli', sans-serif;
   background-color: rgba(11, 8, 10, 0.3);
-  color: white;
+  color: #FFEFE5;
   font-weight: bold;
   justify-content: center;
-}
-
-.add-button {
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 200px;
-}
-
-.add-button a {
-  color: white;
-  text-decoration: none;
-  font-family: 'Muli', sans-serif;
 }
 
 .workoutgoal-container {
@@ -110,7 +98,6 @@ header a:hover{
   flex-direction: column;
   margin: 200px auto 0px auto;
   width: 100vw;
-  height: 80vh;
 }
 
 .workoutandgoal {
@@ -118,59 +105,262 @@ header a:hover{
   justify-content: space-between;
 }
 
-.workouthome {
-  margin: auto;
-}
-
-.goalhome {
-  margin: auto;
-}
-
-
-.workouthome, .goalhome {
-  color: rgba(11, 8, 10, 0.71);
-  background-color: #EFE8D8;
+.workouthome, .goalhome, .indexplusoptions {
   font-weight: bold;
   width: 30vw;
-  font-size: 20px;
-  text-shadow: 1px 1px 3px #3C485E;
   border-radius: 5%;
-  box-shadow: 6px 6px 2px #EFE8D8;
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+  border: 4px solid #FFEFE5;
+  background-color: rgba(228, 214, 249, 0.09);
+  box-shadow: 5px 5px 10px #FFEFE5;
+}
+
+.workout, .goal {
+  border-radius: 20%;
+  color: #FFEFE5;
+  font-size: 20px;
+}
+
+.workout a, .goal a {
+  color: white;
+  text-decoration: none;
+}
+
+.goalname {
+  color: #FFEFE5;
 }
 
 .add-buttonhome {
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .add-buttonhome a {
-  color: rgba(11, 8, 10, 0.71);
+  color: #FFEFE5;
   text-decoration: none;
   font-family: 'Muli', sans-serif;
   text-transform: uppercase;
   font-size: 25px;
+  text-shadow: 5px 5px 10px black;
 }
 
 .add-buttonhome a:hover {
   font-size: 30px;
 }
 
-.workoutgoal-container h2 {
-  color: rgba(11, 8, 10, 0.71);
+.workoutgoal-container h2 a {
+  color: #FFEFE5;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: underline;
-  margin-bottom: 15px;
   text-align: center;
-  text-shadow: 2px 2px 5px #3C485E;
+  text-shadow: 5px 5px 10px black;
+}
+
+.workoutgoal-container h2 {
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.workoutgoal-container h2 a:hover {
+  font-size: 35px;
 }
 
 .workoutgoal-container h1 {
-  font-size: 100px;
-  color: white;
+  font-size: 150px;
+  color: #FFEFE5;
   font-family: 'Muli', sans-serif;
   display: flex;
-  text-shadow: 5px 5px 10px black;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.edit form {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.allworkouts a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+}
+
+.workoutgoal-view {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  width: 50vw;
+}
+
+.workoutgoal-view h1 {
+  font-size: 80px;
+  color: #FFEFE5;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 3px #FFEFE5;
+  margin: auto;
+  padding: 30px;
+}
+
+.workoutgoal-view a {
+  color: #FFEFE5;
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  text-transform: uppercase;
+  font-size: 25px;
+  text-shadow: 2px 2px 3px #FFEFE5;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.workoutgoal-view a:hover {
+  font-size: 35px;
+}
+
+.indexview1, .indexview2, .indexview, .options {
+  display: flex;
+  margin: auto;
+  color: #FFEFE5;
   justify-content: center;
 }
+
+.dateview {
+  font-size: 30px;
+  display: flex;
+}
+
+.categoryview {
+  font-size: 35px;
+  display: flex;
+}
+
+.options ul {
+  display: flex;
+  padding: 10px;
+}
+
+.options li {
+  margin-left: 10px;
+}
+
+.options ul li a{
+  display: flex;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0px 0px 2px #FFEFE5;
+  border-bottom: 1px solid #FFEFE5;
+}
+.indexview1 span, .indexview2 span {
+  display: flex;
+  margin-left: 10px;
+}
+
+.indexview1 span.name {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.indexview2 span.description {
+  font-size: 30px;
+}
+
+.add-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.add-button a, .showworkoutgoal a {
+  color: #FFEFE5;
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  text-transform: uppercase;
+  font-size: 25px;
+  text-shadow: 3px 3px 7px #FFEFE5;
+  margin-bottom: 10px;
+}
+
+.add-button a:hover, .showworkoutgoal a:hover {
+  font-size: 30px;
+}
+
+.indexplusoptions1 {
+  font-weight: bold;
+  width: 50vw;
+  border-radius: 5%;
+  text-align: center;
+  margin: auto;
+  border: 4px solid #FFEFE5;
+  background-color: rgba(228, 214, 249, 0.09);
+  box-shadow: 5px 5px 10px #FFEFE5;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.addedit input {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFEFE5;
+  border: 2px solid #FFEFE5;
+  padding: 20px;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  background-color: #12162D;
+  box-shadow: 0px 1px 2px #FFEFE5;
+  width: 30vw;
+  margin: auto;
+}
+
+.showworkoutgoal {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  color: #FFEFE5;
+  text-align: center;
+  border: 4px solid #FFEFE5;
+  background-color: rgba(228, 214, 249, 0.09);
+  box-shadow: 5px 5px 10px #FFEFE5
+}
+
+.showworkoutgoal h1 {
+  font-size: 100px;
+}
+
+.showworkoutgoal span {
+  font-size: 40px;
+}
+
+.showworkoutgoal h2 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.showworkoutgoal p {
+  font-style: italic;
+  font-size: 50px;
+}
+
+.showoptions {
+  margin-bottom: 20px;
+  padding: 10px 0px 10px 0px;
+}
+

@@ -1,7 +1,8 @@
 <% include ../partials/boilerplate %>
 
-<div class="workoutgoal-container">
-  <div class="edit">
+<div class="workoutgoal-view">
+<h1>Edit Goal</h1>
+  <div class="addedit">
     <form action="/goal/<%= goal.id%>?_method=PUT" method="POST">
       <input type="text" name="name" placeholder="Name" value="<%= goal.name %>" />
       <input type="text" name="description" placeholder="Description" value="<%= goal.description %>" />
