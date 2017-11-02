@@ -220,7 +220,7 @@ header a:hover {
   font-family: 'Muli', sans-serif;
   text-transform: uppercase;
   font-size: 25px;
-  text-shadow: 2px 2px 3px #FFEFE5;
+  text-shadow: 5px 5px 10px black;
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -260,7 +260,7 @@ header a:hover {
   display: flex;
   color: white;
   text-decoration: none;
-  text-shadow: 0px 0px 2px #FFEFE5;
+  text-shadow: 5px 5px 10px black;
   border-bottom: 1px solid #FFEFE5;
 }
 .indexview1 span, .indexview2 span {
@@ -291,7 +291,7 @@ header a:hover {
   font-family: 'Muli', sans-serif;
   text-transform: uppercase;
   font-size: 25px;
-  text-shadow: 3px 3px 7px #FFEFE5;
+  text-shadow: 5px 5px 10px black;
   margin-bottom: 10px;
 }
 
