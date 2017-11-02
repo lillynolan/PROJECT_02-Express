@@ -142,6 +142,7 @@ User.findUserGoals = id => {
 Proud of the above, was an ongoing error // block I was facing when trying to pull goals and workouts in relation to one specific user by their common user_id. At first I was writing with one query joining workouts and goals on their common user_id but it outputted double the information needed. Instead of letting myself stare endlessly at it or foregoing having a users home page, i went to the src and asked for help. Through conversations and reiterating what i wanted to do, a way to achieve what i wanted for my user experience and general functionality became possible. The above model methods are called in user index controller as functions and rendered to the users-home view in relation to the specific user loggedin. 
 
 Any things you plan to fix or features you plan to add
+
 I plan to fix and spend more time on the CSS. One of the things that this project made me realize is that CSS is equally as important as the baseline functionality of your app when it comes to the final product. When we're building there's such a natural inclination to focus way more on the functionality of everything and making sure it works. Which is a good way to start, but when I was doing the CSS I started to realize that the way I set up my views needed to be purposeful if I wanted to have a CSS format that could consistently output on everypage. 
 
 I would love to add a randomizing feature where users could flip through their inputted workouts and have it randomize what they inputted and show them a potential workout to do for the day.  
