@@ -145,7 +145,7 @@ Any things you plan to fix or features you plan to add
 
 I plan to fix and spend more time on the CSS. One of the things that this project made me realize is that CSS is equally as important as the baseline functionality of your app when it comes to the final product. When we're building there's such a natural inclination to focus way more on the functionality of everything and making sure it works. Which is a good way to start, but when I was doing the CSS I started to realize that the way I set up my views needed to be purposeful if I wanted to have a CSS format that could consistently output on everypage. 
 
-I would love to add a randomizing feature where users could flip through their inputted workouts and have it randomize what they inputted and show them a potential workout to do for the day.  
+I would love to add a randomizing feature where users could flip through their inputted workouts and output a potential workout to do for the day.  
 
 Instructions for downloading the code and running it on localhost:
 
